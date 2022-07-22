@@ -32,4 +32,5 @@ Then add the following line in : /boot/config.txt
 You can specify which line to use for the sensor (in the exemple : GPIO6), GPIO4 is the default
 
 Library w1thermsensor : [https://github.com/timofurrer/w1thermsensor](https://github.com/timofurrer/w1thermsensor)
+
 Example : [ds18b20.py](ds18b20.py)
