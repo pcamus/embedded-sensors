@@ -13,7 +13,7 @@
 - Thermostats.
 - Thermometers.
 - Heating control.
-\
+
 \
 ***PDF in french :*** [DS1820.pdf](DS18B20.pdf)
 
