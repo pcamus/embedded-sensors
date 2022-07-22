@@ -32,7 +32,7 @@ Then add the following line in : `/boot/config.txt`
 
 `dtoverlay=w1-gpio,gpiopin=6`
 
-You can specify which line to use for the sensor with gpiopin= (in the exemple : GPIO6), GPIO4 is the default
+You can specify which line to use for the sensor with `gpiopin=` (in the exemple : GPIO6), GPIO4 is the default
 
 Library w1thermsensor : [https://github.com/timofurrer/w1thermsensor](https://github.com/timofurrer/w1thermsensor)
 
