@@ -25,7 +25,9 @@ Example : [ds18b20.ino](ds18b20.ino)
 First, OneWire bus must be enabled with the configuration utility of Raspbian (interface tab).
 
 Then add the following line in : /boot/config.txt
+
 `dtoverlay=w1-gpio,gpiopin=6`
+
 You can specify which line to use for the sensor (in the exemple : GPIO6), GPIO4 is the default
 
 Library w1thermsensor : [https://github.com/timofurrer/w1thermsensor](https://github.com/timofurrer/w1thermsensor)
