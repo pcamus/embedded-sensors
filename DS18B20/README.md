@@ -16,7 +16,6 @@
 
 ***PDF in french :*** [DS1820.pdf](DS18B20.pdf)
 
-
 ***Arduino programming in C/C++.***
 DallasTemperature library :[https://github.com/milesburton/Arduino-Temperature-Control-Library](https://github.com/milesburton/Arduino-Temperature-Control-Library)
 
@@ -26,7 +25,6 @@ Example : [ds18b20.ino](ds18b20.ino)
 First, OneWire bus must be enabled with the configuration utility of Raspbian (interface tab).
 
 Then add the following line in : /boot/config.txt
-
 `dtoverlay=w1-gpio,gpiopin=6`
 You can specify which line to use for the sensor (in the exemple : GPIO6), GPIO4 is the default
 
