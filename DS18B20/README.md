@@ -6,18 +6,17 @@
 - Accuracy +/-0.5°C from -10°C to +85°C
 - Supply voltage : from 3V to 5.5V
 - Interface: [OneWire](https://en.wikipedia.org/wiki/1-Wire)
-- Datasheet: <a href="https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf">DS18B20</a></li>
+- Datasheet: [DS18B20](https://datasheets.maximintegrated.com
 
-<p><em><strong>Applications :</strong></em></p>
-<ul>
-<li>Thermostats.</li>
-<li>Thermometers.</li>
-<li>Heating control.</li>
-</ul>
+***Applications :***
 
-<em><strong>PDF in french :</strong></em> <a href="https://github.com/pcamus/embedded-sensors/blob/main/DS18B20/DS18B20.pdf">DS18B20.pdf</a>
-<p>&nbsp;</p>
-<p><em><strong>Arduino programming in C/C++.</strong></em></p>
+- Thermostats.
+- Thermometers.
+- Heating control.
+
+***PDF in french :*** [DS1820.pdf](https://github.com/pcamus/embedded-sensors/blob/main/DS18B20/DS18B20.pdf
+
+***Arduino programming in C/C++.***
 <p>DallasTemperature library :<a href="https://github.com/milesburton/Arduino-Temperature-Control-Library">https://github.com/milesburton/Arduino-Temperature-Control-Library</a></p>
 <p>Example : <a href="https://github.com/pcamus/embedded-sensors/blob/main/DS18B20/ds18b20.ino">ds18b20.ino</a></p>
 
