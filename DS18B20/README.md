@@ -16,6 +16,7 @@
 
 ***PDF in french :*** [DS1820.pdf](DS18B20.pdf)
 
+-----
 ***Arduino programming in C/C++.***
 DallasTemperature library :[https://github.com/milesburton/Arduino-Temperature-Control-Library](https://github.com/milesburton/Arduino-Temperature-Control-Library)
 
