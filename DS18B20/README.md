@@ -1,5 +1,5 @@
-##DS18B20.
-###Waterproof temperature sensor.
+## DS18B20.
+### Waterproof temperature sensor.
 <p><em><strong>Features:</strong></em></p>
 <ul>
 <li>Range : -55&deg;C &agrave; +125&deg;C</li>
