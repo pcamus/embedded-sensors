@@ -15,4 +15,4 @@
 <li>Heating control.</li>
 </ul>
 
-PDF in french : <a href="https://github.com/pcamus/embedded-sensors/blob/main/DS18B20/DS18B20.pdf">DS18B20.pdf</a>
+<em>PDF in french :</em> <a href="https://github.com/pcamus/embedded-sensors/blob/main/DS18B20/DS18B20.pdf">DS18B20.pdf</a>
