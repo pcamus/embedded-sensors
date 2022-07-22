@@ -18,12 +18,14 @@
 
 ***Arduino programming in C/C++.***
 DallasTemperature library :[https://github.com/milesburton/Arduino-Temperature-Control-Library](https://github.com/milesburton/Arduino-Temperature-Control-Library)
-<p>Example : <a href="https://github.com/pcamus/embedded-sensors/blob/main/DS18B20/ds18b20.ino">ds18b20.ino</a></p>
+Example :[ds18b20.ino](ds18b20.ino) 
 
-<p>&nbsp;</p>
-<p><em><strong>Pythonprogramming for the Raspberry Pi.</strong></em></p>
-<p>First, OneWire bus must be enabled with the configuration utility of Raspbian (interface tab).</p>
-Then add the following line in : /boot/config.txt<br /><strong>dtoverlay=w1-gpio,gpiopin=6</strong><br />
-You can specify which line to use for the sensor (in the exemple : GPIO6), GPIO4 is the default</p>
-<p>Library w1thermsensor :<br /><a href="https://github.com/timofurrer/w1thermsensor">https://github.com/timofurrer/w1thermsensor</a></p>
-<p>Example : <a href="https://github.com/pcamus/embedded-sensors/blob/main/DS18B20/ds18b20.py">ds18b20.py</a></p>
+***Pythonprogramming for the Raspberry Pi.***
+First, OneWire bus must be enabled with the configuration utility of Raspbian (interface tab).
+
+Then add the following line in : /boot/config.txt
+`dtoverlay=w1-gpio,gpiopin=6`
+You can specify which line to use for the sensor (in the exemple : GPIO6), GPIO4 is the default
+
+Library w1thermsensor :[https://github.com/timofurrer/w1thermsensor](https://github.com/timofurrer/w1thermsensor)
+Example : [ds18b20.py](ds18b20.py)
