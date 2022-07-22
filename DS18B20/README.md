@@ -18,5 +18,5 @@
 <em><strong>PDF in french :</strong></em> <a href="https://github.com/pcamus/embedded-sensors/blob/main/DS18B20/DS18B20.pdf">DS18B20.pdf</a>
 <p>&nbsp;</p>
 <p><em><strong>Arduino programming in C/C++.</strong></em></p>
-<p>Librairie DallasTemperature :<a href="https://github.com/milesburton/Arduino-Temperature-Control-Library">https://github.com/milesburton/Arduino-Temperature-Control-Library</a></p>
+<p>DallasTemperature library :<a href="https://github.com/milesburton/Arduino-Temperature-Control-Library">https://github.com/milesburton/Arduino-Temperature-Control-Library</a></p>
 <p>Example : <a href="https://github.com/pcamus/embedded-sensors/blob/main/DS18B20/ds18b20.ino">ds18b20.ino</a></p>
