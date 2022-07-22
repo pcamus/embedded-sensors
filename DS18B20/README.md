@@ -20,4 +20,4 @@
 <p><em>Programmation pour un Arduino.<em></p>
 <p>Librairie DallasTemperature :</p>
 <p><a href="https://github.com/milesburton/Arduino-Temperature-Control-Library">https://github.com/milesburton/Arduino-Temperature-Control-Library</a></p>
-<p>Exemple : <a href="https://github.com/pcamus/embedded-sensors/blob/main/DS18B20/DS18B20.ino">ds18b20.ino</a></p>
+<p>Exemple : <a href="https://github.com/pcamus/embedded-sensors/blob/main/DS18B20/ds18b20.ino">ds18b20.ino</a></p>
