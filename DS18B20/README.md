@@ -1,10 +1,10 @@
 ## DS18B20.
 ### Waterproof temperature sensor.
-<p><em><strong>Features:</strong></em></p>
-<ul>
-<li>Range : -55&deg;C &agrave; +125&deg;C</li>
-<li>Accuracy &plusmn;0.5&deg;C from -10&deg;C to +85&deg;C</li>
-<li>Supply voltage : from 3V to 5.5V</li>
+***Features:***
+
+- Range : -55°C to +125&°C
+- Accuracy +/-0.5°C from -10°C to +85°C
+- Supply voltage : from 3V to 5.5V
 <li>Interface&nbsp;: <a href="https://en.wikipedia.org/wiki/1-Wire">OneWire</a></li>
 <li>Datasheet&nbsp;: <a href="https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf">DS18B20</a></li>
 </ul>
