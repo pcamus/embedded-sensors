@@ -1,5 +1,5 @@
-<h2>DS18B20.</h2>
-<h3>Waterproof temperature sensor.</h3>
+##DS18B20.
+###Waterproof temperature sensor.
 <p><em><strong>Features:</strong></em></p>
 <ul>
 <li>Range : -55&deg;C &agrave; +125&deg;C</li>
@@ -24,7 +24,7 @@
 <p>&nbsp;</p>
 <p><em><strong>Pythonprogramming for the Raspberry Pi.</strong></em></p>
 <p>First, OneWire bus must be enabled with the configuration utility of Raspbian (interface tab).</p>
-Then add the following line in : `/boot/config.txt`<br /><strong>dtoverlay=w1-gpio,gpiopin=6</strong><br />
+Then add the following line in : /boot/config.txt<br /><strong>dtoverlay=w1-gpio,gpiopin=6</strong><br />
 You can specify which line to use for the sensor (in the exemple : GPIO6), GPIO4 is the default</p>
 <p>Library w1thermsensor :<br /><a href="https://github.com/timofurrer/w1thermsensor">https://github.com/timofurrer/w1thermsensor</a></p>
 <p>Example : <a href="https://github.com/pcamus/embedded-sensors/blob/main/DS18B20/ds18b20.py">ds18b20.py</a></p>
