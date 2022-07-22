@@ -26,7 +26,7 @@ Example : [ds18b20.ino](ds18b20.ino)
 
 ***Python programming for the Raspberry Pi.***
 
-First, OneWire bus must be enabled with the configuration utility of Raspbian (_interface_-- tab).
+First, OneWire bus must be enabled with the configuration utility of Raspbian (in the _interface_ tab).
 
 Then add the following line in : `/boot/config.txt`
 
