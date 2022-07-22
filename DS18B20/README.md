@@ -5,7 +5,7 @@
 - Range : -55°C to +125&°C
 - Accuracy +/-0.5°C from -10°C to +85°C
 - Supply voltage : from 3V to 5.5V
-- Interface: <a href="https://en.wikipedia.org/wiki/1-Wire">OneWire</a></li>
+- Interface: [OneWire](https://en.wikipedia.org/wiki/1-Wire)
 - Datasheet: <a href="https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf">DS18B20</a></li>
 
 <p><em><strong>Applications :</strong></em></p>
