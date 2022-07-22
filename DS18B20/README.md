@@ -24,6 +24,8 @@ DallasTemperature library :[https://github.com/milesburton/Arduino-Temperature-C
 
 Example : [ds18b20.ino](ds18b20.ino) 
 
+&nbsp;
+
 ***Python programming for the Raspberry Pi.***
 
 First, OneWire bus must be enabled with the configuration utility of Raspbian (in the _interface_ tab).
