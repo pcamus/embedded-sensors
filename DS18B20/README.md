@@ -27,5 +27,4 @@
 Then add the following line in : /boot/config.txt<br /><strong>dtoverlay=w1-gpio,gpiopin=6</strong><br />
 You can specify which line to use for the sensor (in the exemple : GPIO6), GPIO4 is the default</p>
 <p>Library w1thermsensor :<br /><a href="https://github.com/timofurrer/w1thermsensor">https://github.com/timofurrer/w1thermsensor</a></p>
-<p>Example : <a href="https://github.com/pcamus/embedded-sensors/blob/main/DS18B20/ds18b20.ino">https://github.com/pcamus/embedded-sensors/blob/main/DS18B20/ds18b20.py</a></p>
-
+<p>Example : <a href="https://github.com/pcamus/embedded-sensors/blob/main/DS18B20/ds18b20.py">ds18b20.py</a></p>
