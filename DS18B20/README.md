@@ -16,3 +16,8 @@
 </ul>
 
 <em>PDF in french :</em> <a href="https://github.com/pcamus/embedded-sensors/blob/main/DS18B20/DS18B20.pdf">DS18B20.pdf</a>
+
+<p><em>Programmation pour un Arduino.<em></p>
+<p>Librairie DallasTemperature :</p>
+<p><a href="https://github.com/milesburton/Arduino-Temperature-Control-Library">https://github.com/milesburton/Arduino-Temperature-Control-Library</a></p>
+<p>Exemple : <a href="https://github.com/pcamus/embedded-sensors/blob/main/DS18B20/DS18B20.ino">DS18B20.ino</a></p>
