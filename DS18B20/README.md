@@ -23,7 +23,7 @@
 
 <p>&nbsp;</p>
 <p><em><strong>Pythonprogramming for the Raspberry Pi.</strong></em></p>
-<p>OneWire bus must be enabled with the configuration utility of Raspbian,interface tab.<br />
+<p>First OneWire bus must be enabled with the configuration utility of Raspbian,interface tab.</p>
 Then add the following line in : /boot/config.txt<br />dtoverlay=w1-gpio,gpiopin=6<br />
 You can specify which line to use for the sensor (in the exemple : GPIO6), GPIO4 is the default</p>
 <p>Libray w1thermsensor :<br /><a href="https://github.com/timofurrer/w1thermsensor">https://github.com/timofurrer/w1thermsensor</a></p>
