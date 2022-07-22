@@ -38,3 +38,10 @@ You can specify which line to use for the sensor with `gpiopin=` (in the exemple
 Library w1thermsensor : [https://github.com/timofurrer/w1thermsensor](https://github.com/timofurrer/w1thermsensor)
 
 Example : [ds18b20.py](ds18b20.py)
+
+-----
+***Provider***
+
+- [Gotronic](https://www.gotronic.fr/art-sonde-etanche-ds18b20-19339.htm)  metal housing
+- [Antratek](https://www.antratek.com/temperature-sensor-waterproof-ds18b20) platsic housing
+- [Mouser](https://www.mouser.be/ProductDetail/SparkFun/SEN-11050?qs=WyAARYrbSnY0sq2HamgEvg%3D%3D) plastic housing
