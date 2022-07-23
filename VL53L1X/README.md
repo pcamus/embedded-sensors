@@ -9,3 +9,14 @@
 - Interface : [I2C on Qwiic](https://www.sparkfun.com/qwiic)
 - IC datasheet : [VL53L1X](https://cdn.sparkfun.com/assets/8/9/9/a/6/VL53L0X_DS.pdf)
 - Breakout : [Sparkfun VL53L1X](https://www.sparkfun.com/products/14722)
+
+***Applications :***
+
+- Distance ranging.
+- Room mapping.
+
+
+\
+***PDF in french :*** [VL53L1X.pdf](VL53L1X.pdf)
+
+-----
