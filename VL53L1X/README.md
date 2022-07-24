@@ -36,6 +36,13 @@ Example : [vl53l1x.py](vl53l1x.py)
 \
 ***MicroPython programming for the Raspberry Pi Pico.***
 
-Guide with link to libraries : [https://core-electronics.com.au/tutorials/raspberry-pi-pico/piicodev-distance-sensor-vl53l1x-raspberry-pi-pico-guide.html](https://core-electronics.com.au/tutorials/raspberry-pi-pico/piicodev-distance-sensor-vl53l1x-raspberry-pi-pico-guide.html)
+Guide with links to libraries : [https://core-electronics.com.au/tutorials/raspberry-pi-pico/piicodev-distance-sensor-vl53l1x-raspberry-pi-pico-guide.html](https://core-electronics.com.au/tutorials/raspberry-pi-pico/piicodev-distance-sensor-vl53l1x-raspberry-pi-pico-guide.html)
 
 Example : [vl53l1x_mp.py](vl53l1x_mp.py)
+
+-----
+***Suppliers.***
+
+- [Antratek VL53L1X](https://www.antratek.com/distance-sensor-breakout-4-meter-vl53l1x-qwiic)
+- [Antratek VL53L5X](https://www.antratek.com/tof-imager-vl53l5cx-qwiic)
+- [Elektor VL53L1X](https://www.elektor.fr/sparkfun-distance-sensor-breakout-4-m-vl53l1x-qwiic)
