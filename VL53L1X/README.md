@@ -21,9 +21,21 @@
 
 -----
 ***Arduino programming in C/C++.***
+
 Sparkfun library : [https://github.com/sparkfun/SparkFun_VL53L1X_Arduino_Library](https://github.com/sparkfun/SparkFun_VL53L1X_Arduino_Library)
 
 Example : [vl53l1x.ino](vl53l1x.ino)
 
 \
 ***Python programming for the Raspberry Pi.***
+
+Sparkfun library : [https://github.com/sparkfun/Qwiic_VL53L1X_Py](https://github.com/sparkfun/Qwiic_VL53L1X_Py)
+
+Example : [vl53l1x.py](vl53l1x.py)
+
+\
+***MicroPython programming for the Raspberry Pi Pico.***
+
+Guide with link to libraries : [https://core-electronics.com.au/tutorials/raspberry-pi-pico/piicodev-distance-sensor-vl53l1x-raspberry-pi-pico-guide.html](https://core-electronics.com.au/tutorials/raspberry-pi-pico/piicodev-distance-sensor-vl53l1x-raspberry-pi-pico-guide.html)
+
+Example : [vl53l1x_mp.py](vl53l1x_mp.py)
