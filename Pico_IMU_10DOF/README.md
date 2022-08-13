@@ -9,3 +9,12 @@ The [schematic](Pico-10DOF-IMU_Sch.pdf) of the board gives details of the circui
 
 The wiki of the manufacturer is : [https://www.waveshare.com/wiki/Pico-10DOF-IMU](https://www.waveshare.com/wiki/Pico-10DOF-IMU)
 
+The borad will be used with a MicroPyhton program.
+
+The manufacturer gives two MicroPython programs to test the sensor. Although the programs work, I found them difficult to understand, cluttered with useless details and with containing very few comments. The code is [here](waveshare_code).
+
+So, I decided to make a module containing a class for the ICM20948 and one with a class for the LPS22HB and two test files for each device.
+
+Theses module are simple one and don't uses all the features of the sensors. For instance the ICM20948 class can only access the accelerometer and the temperature sensor. More will follow.
+
+You can find my code [here](/my_IMU_code)
