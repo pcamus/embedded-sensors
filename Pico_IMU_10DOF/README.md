@@ -11,7 +11,7 @@ The wiki of the manufacturer is : [https://www.waveshare.com/wiki/Pico-10DOF-IMU
 
 The board will be used with a MicroPyhton program.
 
-The manufacturer gives two MicroPython programs to test the sensor. Although the programs work, I found them difficult to understand, cluttered with useless details and with containing very few comments. The code is [here](waveshare_code).
+The manufacturer gives two MicroPython programs to test the sensor. Although the programs work, I found them difficult to understand, cluttered with useless details and containing very few comments. The code is [here](waveshare_code).
 
 So, I decided to make two modules, one containing a class for the ICM20948 and one with a class for the LPS22HB and two test files for each device.
 
@@ -20,3 +20,7 @@ Theses modules are simple and don't use all the features of the sensors. For ins
 You can find my code [here](my_IMU_code)
 
 The first application of these modules will be to measure the trajectory of a weather balloon.
+
+- [ ] To do : add member functions for the gyroscope and magnetometer.
+- [ ] To do : study how to use the DMP processor.
+- [ ] To do : check data acquisition time in order to determine the maxime sampling speed (using a logic analyser).
