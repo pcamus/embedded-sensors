@@ -49,7 +49,6 @@ class LPS22HB(object):
             sys.exit()
             
         self.LPS22HB_RESET()  # Reset LPS22HB
-        self._write_byte(ADD_CTRL_REG1 ,VAL_CTRL_REG1) # configure LPS22HB
         
     def LPS22HB_RESET(self):
         Buf = self._read_byte(ADD_CTRL_REG2)
@@ -78,7 +77,7 @@ class LPS22HB(object):
     
     def LPS22HB_START_ONESHOT(self):
         Buf = self._read_byte(ADD_CTRL_REG2)
-        Buf = Buf | ONE_SHOT_MASK      # Start new conversion
+        Buf = Buf | ONE_SHOT_MASK      # Start new acquisition
         self._write_byte(ADD_CTRL_REG2,Buf)
    
     def _read_byte(self,cmd):
