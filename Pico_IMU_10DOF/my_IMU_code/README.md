@@ -43,4 +43,7 @@ This method triggers an acquisition.
  
  See [https://docs.micropython.org/en/latest/library/machine.I2C.html](https://docs.micropython.org/en/latest/library/machine.I2C.html) for details about the MicroPython I<sup>2</sup>C module.
  
- 
+\
+Program to test the class : [lps22hb_simple_test.py](lps22hb_simple_test.py).
+
+Imports lps22hb_mod, creates the **`lps22hb`** object from the **`LPSHB22`** class then calls **`LPS22HB_READ_P_T()`** method 10 times and dsiplays returned values with 1 second delay between each call.
