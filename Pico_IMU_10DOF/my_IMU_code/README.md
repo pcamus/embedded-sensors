@@ -2,7 +2,7 @@
 
 **ICM20948.**
 
-
+-----
 **LPS22HB.**
 
 Class to use the LPS22HB chip : [lps22hb_mod.py](lps22hb_mod.py).
@@ -21,20 +21,24 @@ The the class inherits of the **`object`** class. This is not mandatory, for a d
 - Tests if the right component is present.
 -  Make a reset of the chip by calling the **`LPS22HB_RESET()`** method.
 
+\
 **`def LPS22HB_RESET(self):`**
 
 Reset method, writes a 1 to the SWRESET bit of the CTRL_REG2 and the wait until this bit is clear by the chip indicting the end of the reset process.
 
+\
 **`def LPS22HB_READ_P_T(self):`**
 
 Read pressure and temperature values inside the chip. Return them.
 
 Note that these values are stored in the object data members and remains there between calls. If data is not available **`self._read_byte(ADD_STATUS) & P_DA_MASK`** return 0 and the code returns the previous sampled value.
 
+\
 **`def LPS22HB_START_ONESHOT(self):`**
 
 This method triggers an acquisition.
 
+\
  **`def _read_byte(self,cmd):`** et **`def _write_byte(self,cmd,val):`** are read and write methods on the I<sub>2</sub>C bus.
  
  See [https://docs.micropython.org/en/latest/library/machine.I2C.html](https://docs.micropython.org/en/latest/library/machine.I2C.html) for details about the MicroPython I<sub>2</sub>C module
