@@ -6,4 +6,4 @@ The targeted platforms will be the Raspberry Pi, Raspberry Pi Pico and Arduino. 
 
 - [DS18B20](/DS18B20) : OneWire temperature sensor.
 - [VL53L1X](VL53L1X) : distance ranging ToF sensor.
-- [ICM20948 & LPS22HB] (Pico_IMU_10DOF) : accelerometer, gyroscope, magnetometer, temperature and pressure sensors
+- [ICM20948 & LPS22HB](Pico_IMU_10DOF) : accelerometer, gyroscope, magnetometer, temperature and pressure sensors
