@@ -39,8 +39,8 @@ ADD_TEMP_OUT_H                   = 0x39 # 16 bits temperature register
 
 
 # user bank 2 used registers
-ADD_ACCEL_SMPLRT_DIV_2           = 0x10  # ACCEL_SMPLRT_DIV[11:8], sample rate divider MSB
-                                         # not used assumed to be 0 (reset value)
+ADD_ACCEL_SMPLRT_DIV_2           = 0x10  # ACCEL_SMPLRT_DIV[11:8], sample rate divider,
+                                         # MSB not used assumed to be 0 (reset value)
 ADD_ACCEL_SMPLRT_DIV_2           = 0x11  # ACCEL_SMPLRT_DIV[7:0], sample rate divider LSB
 VAL_ACCEL_DLPFCFG                = 0x07  # ODR (Output Data Rate) = 140.6 Hz
 
