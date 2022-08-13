@@ -27,3 +27,13 @@ Reset method, writes a 1 to the SWRESET bit of the CTRL_REG2 and the wait until 
 
 Read pressure and temperature values inside the chip. Return them.
 Note that these values are stored in the object data members and remains there between calls. If data is not available **`self._read_byte(ADD_STATUS) & P_DA_MASK`** return 0 and the code returns the previous sampled value.
+
+**`def LPS22HB_START_ONESHOT(self):`**
+
+This method triggers an acquisition.
+
+ **`def _read_byte(self,cmd):`** et **`def _write_byte(self,cmd,val):`** are read and write methods on the I<sub>2</sub>C bus.
+ 
+ See [https://docs.micropython.org/en/latest/library/machine.I2C.html](https://docs.micropython.org/en/latest/library/machine.I2C.html) for details about the MicroPython I<sub>2</sub>C module
+ 
+ 
