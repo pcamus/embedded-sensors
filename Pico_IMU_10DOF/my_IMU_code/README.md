@@ -5,7 +5,7 @@
 
 **LPS22HB.**
 
-[lps22hb_mod.py](lps22hb_mod.py).
+Class to use the LPS22HB chip : [lps22hb_mod.py](lps22hb_mod.py).
 
 The class definition begins after the definition of several LPS22HB registers and parameters values.
 
@@ -19,3 +19,11 @@ The the class inherits of the **`object`** class. This is not mandatory, for a d
 - Tests if the right component is present.
 -  Make a reset of the chip by calling the **`LPS22HB_RESET()`** method.
 
+**`def LPS22HB_RESET(self):`**
+
+Reset method, writes a 1 to the SWRESET bit of the CTRL_REG2 and the wait until this bit is clear by the chip indicting the end of the reset process.
+
+**`def LPS22HB_READ_P_T(self):`**
+
+Read pressure and temperature values inside the chip. Return them.
+Note that these values are stored in the object data members and remains there between calls. If data is not available **`self._read_byte(ADD_STATUS) & P_DA_MASK`** return 0 and the code returns the previous sampled value.
