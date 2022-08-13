@@ -17,4 +17,4 @@ So, I decided to make a module containing a class for the ICM20948 and one with 
 
 Theses module are simple one and don't uses all the features of the sensors. For instance the ICM20948 class can only access the accelerometer and the temperature sensor. More will follow.
 
-You can find my code [here](/my_IMU_code)
+You can find my code [here](my_IMU_code)
