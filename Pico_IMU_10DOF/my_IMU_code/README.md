@@ -2,7 +2,7 @@
 
 **ICM20948.**
 
-Class to access the ICM20948 chip : [ICM20948_mod.py](ICM20948_mod.py).
+Class to access the ICM20948 chip : [icm20948_mod.py](icm20948_mod.py).
 
 The class definition begins after the definition of several ICM20948 registers and parameters values.
 
@@ -23,7 +23,7 @@ The  class inherits of the **`object`** class. This is not mandatory, for a disc
 \
 **`def icm20948_Accel_Read(self):`**
 
-Reads X,Y,Z acceleration. Corrects values to take into account the fact that the value are signed and returns thes values
+Reads X,Y,Z acceleration. Corrects values to take into account the fact that the values are signed and returns thes values
 
 \
 **`def icm20948_Temp_Read(self):`**
