@@ -9,7 +9,7 @@ The class definition begins after the definition of several ICM20948 registers a
 \
 **`class ICM20948(object):`**
 
-The  class inherits of the **`object`** class. This is not mandatory, for a discussion on the subject see : [https://stackoverflow.com/questions/4015417/why-do-python-classes-inherit-object](https://stackoverflow.com/questions/4015417/why-do-python-classes-inherit-object)
+The  class inherits of the **`object`** class. This is not mandatory, for a discussion on the subject see : [https://stackoverflow.com/questions/4015417/why-do-python-classes-inherit-object](https://stackoverflow.com/questions/4015417/why-do-python-classes-inherit-object).
 
 \
 **`def __init__(self,address=I2C_ADD_ICM20948):`**
@@ -17,13 +17,13 @@ The  class inherits of the **`object`** class. This is not mandatory, for a disc
 - The constructor of the class starts with the definition of 4 data members and their initialisation.
 - Tests if the right component is present.
 - Makes a reset of the chip by writing 1 in  the **`VAL_DEVICE_RESET`** bit of the PWR_MGMT_1 register.
-- Chooses the clock source
-- Sets sample rate, filtering characteristing and range of the accelerometer
+- Chooses the clock source.
+- Sets sample rate, filtering characteristics and range of the accelerometer.
 
 \
 **`def icm20948_Accel_Read(self):`**
 
-Reads X,Y,Z acceleration. Corrects values to take into account the fact that the values are signed and returns thes values
+Reads X,Y,Z acceleration. Corrects values to take into account the fact that the values are signed and returns the values.
 
 \
 **`def icm20948_Temp_Read(self):`**
@@ -40,13 +40,13 @@ See [https://docs.micropython.org/en/latest/library/machine.I2C.html](https://do
 \
 Program to test the class : [icm20948_simple_test.py](icm20948_simple_test.py).
 
-Read N_SAMPLE of acceleration at SAMPLE_INTER_MS intervals and store them in a csv file.
+Reads N_SAMPLE of acceleration at SAMPLE_INTER_MS intervals and stores them in a csv file.
 
 - Imports icm20948_mod and creates the **`icm20948`** object from the **`ICM20948`** class.
-- Creates the csv file and write columns header.
+- Creates the csv file and writes columns header.
 - Reads temperature with a call to **`icm20948.icm20948_Temp_Read()`** method.
-- Loops for the acceleration logging and store the value in a list (**`log_data`**).
-- Writes **`log_data`** in the csv file and add temperature reading to the file.
+- Loops for the acceleration logging and stores the value in a list (**`log_data`**).
+- Writes **`log_data`** in the csv file and adds temperature reading to the file.
 
 -----
 **LPS22HB.**
@@ -58,7 +58,7 @@ The class definition begins after the definition of several LPS22HB registers an
 \
 **`class LPS22HB(object):`**
 
-The  class inherits of the **`object`** class. This is not mandatory, for a discussion on the subject see : [https://stackoverflow.com/questions/4015417/why-do-python-classes-inherit-object](https://stackoverflow.com/questions/4015417/why-do-python-classes-inherit-object)
+The  class inherits of the **`object`** class. This is not mandatory, for a discussion on the subject see : [https://stackoverflow.com/questions/4015417/why-do-python-classes-inherit-object](https://stackoverflow.com/questions/4015417/why-do-python-classes-inherit-object).
 
 \
 **`def __init__(self,address=LPS22HB_I2C_ADDRESS):`**
