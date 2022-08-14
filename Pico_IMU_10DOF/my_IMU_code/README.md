@@ -42,11 +42,11 @@ Program to test the class : [icm20948_simple_test.py](icm20948_simple_test.py).
 
 Read N_SAMPLE of acceleration at SAMPLE_INTER_MS intervals and store them in a csv file.
 
-- Imports icm20948_mod and creates the **`icm20948`** object from the **`ICM20948`** class
-- crete the csv file and write columns header
-- reads temperature with a call to **`icm20948.icm20948_Temp_Read()`** method
-- loops for the acceleration logging and store the value in a list (**`log_data`**)
-- writes **`log_data`** in the csv file and add temperature reading to the file.
+- Imports icm20948_mod and creates the **`icm20948`** object from the **`ICM20948`** class.
+- Creates the csv file and write columns header.
+- Reads temperature with a call to **`icm20948.icm20948_Temp_Read()`** method.
+- Loops for the acceleration logging and store the value in a list (**`log_data`**).
+- Writes **`log_data`** in the csv file and add temperature reading to the file.
 
 -----
 **LPS22HB.**
