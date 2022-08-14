@@ -28,10 +28,10 @@ ADD_STATUS       = 0x27   # Status register
 P_DA_MASK        = 0x01   # Temperature data available
 T_DA_MASK        = 0x02   # Pressure data available
 
-ADD_PRESS_OUT_XL = 0x28   # Pressure output registers (24 bits)
+ADD_PRESS_OUT_XL = 0x28   # Pressure output registers (24 bits) LSB first
 ADD_PRESS_OUT_L  = 0x29
 ADD_PRESS_OUT_H  = 0x2A
-ADD_TEMP_OUT_L   = 0x2B   # Temperature output registers (16 bits)
+ADD_TEMP_OUT_L   = 0x2B   # Temperature output registers (16 bits) LSB first
 ADD_TEMP_OUT_H   = 0x2C
 
 class LPS22HB(object):
@@ -40,8 +40,7 @@ class LPS22HB(object):
         self._bus = I2C(1) # creates an instance of I2C1 bus 
         self._pressure = 0 # stores pressure measurement
         self._temperature = 0 # stores temperature measurement
-        self._u8Buf = [0,0,0] # to read bytes from I2C
-        
+                
         # detect if ICM20948 is present
         if self._read_byte(ADD_WHO_AM_I)==VAL_WHO_AM_I:
             print("LPS22HB detected.\r\n")
@@ -64,15 +63,12 @@ class LPS22HB(object):
         self.LPS22HB_START_ONESHOT()
         
         if (self._read_byte(ADD_STATUS) & P_DA_MASK):  # a new pressure data is generated
-            self._u8Buf[0]=self._read_byte(ADD_PRESS_OUT_XL)
-            self._u8Buf[1]=self._read_byte(ADD_PRESS_OUT_L)
-            self._u8Buf[2]=self._read_byte(ADD_PRESS_OUT_H)
-            self._pressure=((self._u8Buf[2]<<16)+(self._u8Buf[1]<<8)+self._u8Buf[0])/4096.0
+            data = self._read_block(ADD_PRESS_OUT_XL,3)
+            self._pressure=((data[2]<<16)+(data[1]<<8)+data[0])/4096.0
                 
         if (self._read_byte(ADD_STATUS) & T_DA_MASK):   # a new pressure data is generated
-            self._u8Buf[0]=self._read_byte(ADD_TEMP_OUT_L)
-            self._u8Buf[1]=self._read_byte(ADD_TEMP_OUT_H)
-            self._temperature=((self._u8Buf[1]<<8)+self._u8Buf[0])/100.0
+            data=self._read_block(ADD_TEMP_OUT_L,2)
+            self._temperature=((data[1]<<8)+data[0])/100.0
             
             return self._pressure, self._temperature
     
@@ -88,3 +84,6 @@ class LPS22HB(object):
     def _write_byte(self,cmd,val):
         self._bus.writeto_mem(int(self._address),int(cmd),bytes([int(val)]))
 
+    def _read_block(self, reg, length=1):
+        rec=self._bus.readfrom_mem(int(self._address),int(reg),length)
+        return rec
