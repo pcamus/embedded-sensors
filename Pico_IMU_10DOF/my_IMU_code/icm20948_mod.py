@@ -31,7 +31,7 @@ ADD_PWR_MGMT_1                   = 0x06 # power management register
 VAL_DEVICE_RESET                 = 0x80 # Device reset
 VAL_CLKSEL                       = 0x01 # Best clock source
 
-ADD_ACCEL_XOUT_H                 = 0x2D # 16 bits X,Y,Z acceleration registers
+ADD_ACCEL_XOUT_H                 = 0x2D # 16 bits X,Y,Z acceleration registers MSB first
 ADD_ACCEL_YOUT_H                 = 0x2F
 ADD_ACCEL_ZOUT_H                 = 0x31
 
