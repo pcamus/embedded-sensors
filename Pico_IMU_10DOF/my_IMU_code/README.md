@@ -63,7 +63,7 @@ The  class inherits of the **`object`** class. This is not mandatory, for a disc
 \
 **`def __init__(self,address=LPS22HB_I2C_ADDRESS):`**
 
-- The constructor of the class starts with the definition of 5 data members and their initialisation.
+- The constructor of the class starts with the definition of 4 data members and their initialisation.
 - Tests if the right component is present.
 - Makes a reset of the chip by calling the **`LPS22HB_RESET()`** method.
 
@@ -85,8 +85,10 @@ Note that these values are stored in the object data members and remains there b
 This method triggers an acquisition.
 
 \
- **`def _read_byte(self,cmd):`** et **`def _write_byte(self,cmd,val):`** are read and write methods on the I<sup>2</sup>C bus.
- 
+**`def _read_byte(self,cmd):`** et **`def _write_byte(self,cmd,val):`** are read and write methods on the I<sup>2</sup>C bus.
+
+**`def _read_block(self, reg, length=1):`** reads a block of contiguous registers starting with reg register. 
+
 See [https://docs.micropython.org/en/latest/library/machine.I2C.html](https://docs.micropython.org/en/latest/library/machine.I2C.html) for details about the MicroPython I<sup>2</sup>C module.
  
 \
