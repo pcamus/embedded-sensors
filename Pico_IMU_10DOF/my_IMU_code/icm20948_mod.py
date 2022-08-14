@@ -105,11 +105,12 @@ class ICM20948(object):
     rec=self._bus.readfrom_mem(int(self._address),int(cmd),1)
     return rec[0]
 
+  def _write_byte(self,cmd,val):
+    self._bus.writeto_mem(int(self._address),int(cmd),bytes([int(val)]))
+    utime.sleep_us(100)  
+
   def _read_block(self, reg, length=1):
     rec=self._bus.readfrom_mem(int(self._address),int(reg),length)
     return rec
 
-  def _write_byte(self,cmd,val):
-    self._bus.writeto_mem(int(self._address),int(cmd),bytes([int(val)]))
-    utime.sleep_us(100)
  
