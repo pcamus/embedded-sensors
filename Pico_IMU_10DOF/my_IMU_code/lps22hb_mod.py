@@ -36,11 +36,12 @@ ADD_TEMP_OUT_H   = 0x2C
 
 class LPS22HB(object):
     def __init__(self,address=LPS22HB_I2C_ADDRESS):
-        self._address = address
-        self._bus = I2C(1)
-        self._pressure = 0
-        self._temperature = 0
-        self._u8Buf = [0,0,0]
+        self._address = address # stores I2C address of LPS22HB
+        self._bus = I2C(1) # creates an instance of I2C1 bus 
+        self._pressure = 0 # stores pressure measurement
+        self._temperature = 0 # stores temperature measurement
+        self._u8Buf = [0,0,0] # to read bytes from I2C
+        
         # detect if ICM20948 is present
         if self._read_byte(ADD_WHO_AM_I)==VAL_WHO_AM_I:
             print("LPS22HB detected.\r\n")
