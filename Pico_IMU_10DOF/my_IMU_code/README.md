@@ -40,7 +40,7 @@ See [https://docs.micropython.org/en/latest/library/machine.I2C.html](https://do
 \
 Program to test the class : [icm20948_simple_test.py](icm20948_simple_test.py).
 
-Reads N_SAMPLE of acceleration at SAMPLE_INTER_MS intervals and stores them in a csv file.
+Reads **`N_SAMPLE`** of acceleration at **`SAMPLE_INTER_MS`** intervals and stores them in a csv file.
 
 - Imports icm20948_mod and creates the **`icm20948`** object from the **`ICM20948`** class.
 - Creates the csv file and writes columns header.
