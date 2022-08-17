@@ -9,7 +9,6 @@
 import uos
 import utime
 from lps22hb_mod import *
-from machine import Pin
 
 temp_cal = -2.3
 pres_cal = 40
