@@ -15,7 +15,6 @@ import utime
 N_SAMPLE=50 # number of sample taken before writing into the file
 SAMPLE_INTER_MS=100 # interval between to samples
    
-  
 icm20948=ICM20948()
 
 filename="acc.csv"
@@ -23,7 +22,6 @@ f = open(filename, "w")
 f.write("Ax;Ay;Az\r\n")
 
 log_data=[]
-utime.sleep(0.5)
 
 Temp=icm20948.icm20948_Temp_Read()
 Temp=(Temp/333.87)+21
