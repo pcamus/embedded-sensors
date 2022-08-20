@@ -11,7 +11,7 @@
 # Chip LPS22HB : https://www.waveshare.com/w/upload/2/20/Lps22hb.pdf
 # Pico 10-DOF IMU module : https://www.waveshare.com/wiki/Pico-10DOF-IMU
 #
-# Results : about 100 ms to slow each 10 seconds.
+# Results : about 60 ms too slow each 10 seconds.
 #
 # info@pcamus.be
 # 17/8/2022
@@ -30,12 +30,23 @@ icm20948=ICM20948()
 lps22hb=LPS22HB()
 
 log_acc=[]
+file_buf_acc= bytearray(600) # 100 x 2 bytes x 3 axis
+file_buf_PT= bytearray(4) # pressure = 2 bytes, temperature 2 bytes
 
 filn_acc="acc.bin"
 filn_PT="Press_Temp.bin"
 
-uos.remove(filn_acc) # removes old copy of files
-uos.remove(filn_PT)
+# removes old copy of files if they exist
+try:
+    uos.remove(filn_acc) 
+except:
+    pass
+
+try:
+    uos.remove(filn_PT) 
+except:
+    pass
+
 
 while(True):
     
@@ -55,18 +66,33 @@ while(True):
     pressure, temperature = lps22hb.LPS22HB_READ_P_T() # and take one pressure and temperature
                                                        # measurement each 10 sec
  
-    f = open(filn_acc, "ab")
+    # Convert data to bytearray
     for i in range(100):
-        f.write(log_acc[i][0].to_bytes(2,"big")) # converts the data into an array of bytes
-        f.write(log_acc[i][1].to_bytes(2,"big")) # "big" means big endian ie MSB first
-        f.write(log_acc[i][2].to_bytes(2,"big"))
+        buf_index=i*6
+        file_buf_acc[buf_index]=log_acc[i][0]//256   # Acc X MSB
+        file_buf_acc[buf_index+1]=log_acc[i][0]%256  # Acc X LSB
+        file_buf_acc[buf_index+2]=log_acc[i][1]//256 # Acc Y MSB 
+        file_buf_acc[buf_index+3]=log_acc[i][1]%256  # Acc Y LSB
+        file_buf_acc[buf_index+4]=log_acc[i][2]//256 # Acc Z MSB
+        file_buf_acc[buf_index+5]=log_acc[i][2]%256  # Acc Z LSB
+    
+    # writes to a binary file
+    f = open(filn_acc, "ab")
+    f.write(file_buf_acc)
     f.close()
     
+    # Convert data to bytearray
+    int_pressure=int(pressure + pres_cal)
+    int_temperature=int((temperature + temp_cal)*10) # scales temperature to keep tenth of degree
+                 
+    file_buf_PT[0]=int_pressure//256
+    file_buf_PT[1]=int_pressure%256
+    file_buf_PT[2]=int_temperature//256                 
+    file_buf_PT[3]=int_temperature%256
+    
+    # writes to a binary file
     f = open(filn_PT, "ab")
-    f.write(int(pressure + pres_cal).to_bytes(2,"big")) # must be converted to integer before
-                                                        # calling conversion to an array of bytes 
-    f.write(int((temperature + temp_cal)*10).to_bytes(2,"big")) # scales temperature to keep
-                                                                # tenth of degree
+    f.write(file_buf_PT)
     f.close()
         
     smpl_end=utime.ticks_ms()
