@@ -29,7 +29,6 @@ pres_cal = 40
 icm20948=ICM20948()
 lps22hb=LPS22HB()
 
-log_acc=[]
 file_buf_acc= bytearray(600) # 100 x 2 bytes x 3 axis
 file_buf_PT= bytearray(4) # pressure = 2 bytes, temperature 2 bytes
 
@@ -57,8 +56,16 @@ while(True):
         
         start=utime.ticks_ms()
        
-        Accel=icm20948.icm20948_Accel_Read()
-        log_acc.append(Accel)
+        Accel=icm20948.icm20948_Accel_Read().copy()
+        
+        # Store in a bytearray buffer after converting in the bytearray element format
+        buf_index=i*6
+        file_buf_acc[buf_index]=Accel[0]//256   # Acc X MSB
+        file_buf_acc[buf_index+1]=Accel[0]%256  # Acc X LSB
+        file_buf_acc[buf_index+2]=Accel[1]//256 # Acc Y MSB 
+        file_buf_acc[buf_index+3]=Accel[1]%256  # Acc Y LSB
+        file_buf_acc[buf_index+4]=Accel[2]//256 # Acc Z MSB
+        file_buf_acc[buf_index+5]=Accel[2]%256  # Acc Z LSB
         
         while utime.ticks_diff(utime.ticks_ms(), start)<100:  # take a sample each 100 ms
             pass     
@@ -66,16 +73,7 @@ while(True):
     pressure, temperature = lps22hb.LPS22HB_READ_P_T() # and take one pressure and temperature
                                                        # measurement each 10 sec
  
-    # Convert data to bytearray
-    for i in range(100):
-        buf_index=i*6
-        file_buf_acc[buf_index]=log_acc[i][0]//256   # Acc X MSB
-        file_buf_acc[buf_index+1]=log_acc[i][0]%256  # Acc X LSB
-        file_buf_acc[buf_index+2]=log_acc[i][1]//256 # Acc Y MSB 
-        file_buf_acc[buf_index+3]=log_acc[i][1]%256  # Acc Y LSB
-        file_buf_acc[buf_index+4]=log_acc[i][2]//256 # Acc Z MSB
-        file_buf_acc[buf_index+5]=log_acc[i][2]%256  # Acc Z LSB
-    
+     
     # writes to a binary file
     f = open(filn_acc, "ab")
     f.write(file_buf_acc)
