@@ -15,13 +15,15 @@ import utime
 N_SAMPLE=50 # number of sample taken before writing into the file
 SAMPLE_INTER_MS=100 # interval between to samples
    
+  
 icm20948=ICM20948()
 
 filename="acc.csv"
 f = open(filename, "w")
-f.write("Ax;Ay;Az\r\n")
+f.write("Ax;Ay;Az\n")
 
 log_data=[]
+utime.sleep(0.5)
 
 Temp=icm20948.icm20948_Temp_Read()
 Temp=(Temp/333.87)+21
@@ -31,18 +33,25 @@ print()
 for i in range(N_SAMPLE): # take N_SAMPLE
     start=utime.ticks_ms()
 
-    Accel=icm20948.icm20948_Accel_Read()
+    Accel=icm20948.icm20948_Accel_Read().copy() # (1) see note below
     log_data.append(Accel)
     print("-------------------------------------------------------------")
-    print("Acceleration:  X = %d , Y = %d , Z = %d\r\n"%(Accel[0],Accel[1],Accel[2]))  
+    print("Acceleration:  X = %d , Y = %d , Z = %d"%(Accel[0],Accel[1],Accel[2]))  
 
     while utime.ticks_diff(utime.ticks_ms(), start)<SAMPLE_INTER_MS:  # logging rate
         pass     
 
 for i in range(len(log_data)):
-    for j in range(2):
-        f.write("%d;"%log_data[i][j])
-    f.write("%d\r\n"%log_data[i][2])
+    f.write("%d;%d;%d\n"%tuple(log_data[i]))
 
-f.write("Temperature = ;%4.1f\r\n"%Temp)
+f.write("Temperature = ;%4.1f\n"%Temp)
 f.close()
+
+# Note (1)
+# The instruction : icm20948.icm20948_Accel_Read()
+# returns a list with the 3-axis acceleration value 
+# The assignment to Accel writes a reference to this list into Accel (not the list values).
+# Without the copy() method, log_data will contain a list of references to the same list
+# (the instance variable list of the object) and not a list of list of values.
+# So, using the copy() method is mandatory to append the 3 axis acceleration list of values.
+# For further information review the effect of the assignment operator for a list.
