@@ -5,7 +5,7 @@ This repository is about a Raspberry Pi Pico (RP2040) extension module containin
 - The ICM20948 which is a 3-axis accelerometer, 3-axis gyroscope and 3-axis magnetometer. This circuit also contains a Digital Motion Processor (DMP) and a temperature sensor. The DMP runs a motion algorithm relieving the processor of this task. See the [datasheet](ICM-20948-v1.5.pdf) for the detailed characteristics.
 - The LPS22HB which is a barometric and temperature sensors. See the [datasheet](Lps22hb.pdf) for the detailed characteristics.
 
-**Warning!!! The new Pico_IMU_10DOF modules (rev 2.1) contain a MPU9250 IMU instead of the ICM20948. The MPU 9250 has the same internal hardware architecture as the ICM20948, the same I2C hardware address **but not the same internal registers configuration nor the same internal addresses!**
+**Warning!!!** The new Pico_IMU_10DOF modules (rev 2.1) contain a MPU9250 IMU instead of the ICM20948. The MPU 9250 has the same internal hardware architecture as the ICM20948, the same I2C hardware address **but not the same internal registers configuration nor the same internal addresses!**
 
 The [schematic](Pico-10DOF-IMU_Sch.pdf) of the board gives details of the circuitry.
 
