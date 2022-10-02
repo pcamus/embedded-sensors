@@ -26,3 +26,4 @@ The first application of these modules will be to measure the trajectory of a we
 - [ ] To do : add member functions for the gyroscope and magnetometer.
 - [ ] To do : study how to use the DMP processor.
 - [ ] To do : check data acquisition time in order to determine the maximum sampling speed (using a logic analyser).
+- [ ] To do : write the driver for the MPU2590 version.
